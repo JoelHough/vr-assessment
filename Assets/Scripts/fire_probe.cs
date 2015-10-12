@@ -15,9 +15,11 @@ public class fire_probe : MonoBehaviour {
 	void Update () {
 	
 		if (Input.GetButtonDown ("Jump")) {
-			Vector3 shootVector = transform.position + new Vector3(1f, 0f, 1f);
-			Rigidbody newProbe = Instantiate(probe, shootVector, transform.rotation) as Rigidbody;
-			newProbe.AddForce(transform.forward*velocity,ForceMode.VelocityChange);
+			Vector3 startPosition = transform.position + new Vector3(1f, 0f, 1f);
+			Vector3 shootVector = new Vector3(1f, 10f, 1f);
+			Rigidbody newProbe = Instantiate(probe, startPosition, transform.rotation) as Rigidbody;
+			newProbe.AddForce(shootVector,ForceMode.VelocityChange);
+
 		}
 	}
 }

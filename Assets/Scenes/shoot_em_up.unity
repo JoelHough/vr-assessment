@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   probe: {fileID: 5422096, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
-  velocity: 15
+  velocity: 10
 --- !u!114 &1346115999
 MonoBehaviour:
   m_ObjectHideFlags: 0

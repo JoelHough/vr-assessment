@@ -333,6 +333,22 @@ Prefab:
       propertyPath: planetSpeedRotation
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2337906, guid: dbbbfb4c7f12958489b3e9259c32ebf7, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416218, guid: dbbbfb4c7f12958489b3e9259c32ebf7, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13564878, guid: dbbbfb4c7f12958489b3e9259c32ebf7, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418896, guid: dbbbfb4c7f12958489b3e9259c32ebf7, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbbbfb4c7f12958489b3e9259c32ebf7, type: 2}
   m_IsPrefabParent: 0
@@ -876,7 +892,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1278467876}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0

@@ -38,3 +38,19 @@ public class Gravity : MonoBehaviour {
 		}
 	}
 }
+
+
+
+// Mass for each planet:
+
+// Mercury  5.53
+// Venus    81.5
+// Earth    1
+// Moon     1.23
+// Mars     10.7
+// Jupiter  31780
+// Saturn   9520
+// Uranus   1450
+// Neptune  1710
+// Sun      33300000
+// Pluto    .25  #neverforget

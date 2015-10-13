@@ -626,6 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlanetToStartWith: {fileID: 1278467876}
+  Cam: {fileID: 1346115995}
   Sun: {fileID: 198592, guid: 725d935985a891e44b11a5159455f73e, type: 2}
   Mercury: {fileID: 162216, guid: 10d65989ecf289147b02b256c114a91a, type: 2}
   Venus: {fileID: 179792, guid: 2d1f17ce4562f05469e62828be33db3b, type: 2}
@@ -1081,8 +1082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193a2aa1fff6a44578db3354d4bd9356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probe: {fileID: 5422096, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
-  velocity: 1
+  probe: {fileID: 5482804, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
+  velocity: 5
 --- !u!114 &1346115999
 MonoBehaviour:
   m_ObjectHideFlags: 0

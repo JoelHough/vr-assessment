@@ -34,7 +34,6 @@ public class switch_planet : MonoBehaviour {
 
 	void changeGameObject (Rigidbody newBody) {
 		GameObject oldPlanet = CurrentPlanet;
-		Debug.Log (CurrentPlanet);
 		CurrentPlanet = Instantiate(newBody, oldPlanet.transform.position, oldPlanet.transform.rotation) as GameObject;
 		Destroy (oldPlanet);
 	}

@@ -20,9 +20,7 @@ public class Gravity : MonoBehaviour {
 		
 			foreach (Collider c in cols) {
 				Rigidbody rb = c.attachedRigidbody;
-				Debug.Log (1);
 				if (rb != null && rb != body && !rbs.Contains (rb)) {
-					Debug.Log(2);
 					rbs.Add (rb);
 					Vector3 offset = body.transform.position - c.transform.position;
 					rb.AddForce (offset / offset.sqrMagnitude * body.GetComponent<Rigidbody>().mass);

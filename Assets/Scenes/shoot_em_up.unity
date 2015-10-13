@@ -202,7 +202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &259406521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ RectTransform:
   m_Father: {fileID: 408509024}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: .200000003}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: .5, y: .5}
@@ -457,7 +457,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ee1f2720929ac9a47ac3a2267216a124, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -512,7 +512,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 14, y: 90}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 110, y: 35}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &875035844
 MonoBehaviour:
@@ -565,8 +565,6 @@ MonoBehaviour:
     - m_Text: Venus
       m_Image: {fileID: 0}
     - m_Text: Earth
-      m_Image: {fileID: 0}
-    - m_Text: Moon
       m_Image: {fileID: 0}
     - m_Text: Mars
       m_Image: {fileID: 0}
@@ -627,13 +625,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3bf417d9f644968912f34073424386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probes: {fileID: 1346115998}
-  gravity: {fileID: 1827707344}
+  PlanetToStartWith: {fileID: 1278467876}
   Sun: {fileID: 198592, guid: 725d935985a891e44b11a5159455f73e, type: 2}
   Mercury: {fileID: 162216, guid: 10d65989ecf289147b02b256c114a91a, type: 2}
   Venus: {fileID: 179792, guid: 2d1f17ce4562f05469e62828be33db3b, type: 2}
   Earth: {fileID: 174458, guid: dbbbfb4c7f12958489b3e9259c32ebf7, type: 2}
-  Moon: {fileID: 132320, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
   Mars: {fileID: 175920, guid: 583c7fdefbc7d3942b7dec4d61b10ee0, type: 2}
   Jupiter: {fileID: 160998, guid: 94f967fb128c41442a87a87b800f1f9c, type: 2}
   Saturn: {fileID: 181702, guid: 622a9f393bf5a4840aa16604ec0f32e1, type: 2}
@@ -706,7 +702,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: 0, y: 25}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &924789880
 MonoBehaviour:
@@ -745,7 +741,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 259406522}
   toggleTransition: 1
-  graphic: {fileID: 1930600908}
+  graphic: {fileID: 0}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
@@ -828,7 +824,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 676394109}
   m_Direction: 2
   m_Value: 0
-  m_Size: .200000003
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1086,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   probe: {fileID: 5422096, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
-  velocity: 5
+  velocity: 1
 --- !u!114 &1346115999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,7 +1307,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1521824810}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1451,7 +1447,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ee1f2720929ac9a47ac3a2267216a124, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1469,47 +1465,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755009583}
---- !u!1 &1827707343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1827707345}
-  - 114: {fileID: 1827707344}
-  m_Layer: 0
-  m_Name: Gravitator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1827707344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1827707343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78646db980ffb40088535dbcc6436251, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planet: {fileID: 1278467876}
-  body: {fileID: 0}
---- !u!4 &1827707345
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1827707343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
 --- !u!1 &1930600906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1930600907
 RectTransform:
   m_ObjectHideFlags: 0

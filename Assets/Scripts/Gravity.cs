@@ -4,22 +4,13 @@ using System.Collections;
 public class Gravity : MonoBehaviour {
 
 	public static float range = 1000;
-	public GameObject planet;
-	public Rigidbody body;
+
+	private Rigidbody body;
 
 	void Awake () {
-		body = planet.GetComponent<Rigidbody> ();
+		body = GetComponent<Rigidbody> ();
 	}
 
-	public void changeGameObject (Rigidbody newBody) {
-		GameObject oldPlanet = planet;
-		Rigidbody oldBody = body;
-		planet = Instantiate(newBody, body.transform.position, body.transform.rotation) as GameObject;
-		body = planet.GetComponent<Rigidbody> ();
-		Destroy (oldBody);
-		Destroy (oldPlanet);
-	}
-	
 	void FixedUpdate () 
 	{	
 		if (body) {

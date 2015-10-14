@@ -22,18 +22,12 @@ public class MoonBehavior : MonoBehaviour {
 	{
 		if (explosion == null) {
 			explosion = Instantiate (explosionObj, col.contacts [0].point, transform.rotation) as Transform;
-			StartCoroutine ("DestroyExplosion");
+			Destroy (gameObject);
 		}
 	}
 
 	IEnumerator TimeToLive(){
 		yield return new WaitForSeconds(TTL);
-		Destroy (gameObject);
-	}
-
-	IEnumerator DestroyExplosion(){
-		yield return new WaitForSeconds (2.0f);
-		Destroy (explosion.gameObject);
 		Destroy (gameObject);
 	}
 }

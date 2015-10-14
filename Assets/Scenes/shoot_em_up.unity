@@ -349,7 +349,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 0}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1379664768}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: dbbbfb4c7f12958489b3e9259c32ebf7, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &676394106
@@ -1098,7 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193a2aa1fff6a44578db3354d4bd9356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probe: {fileID: 5482804, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
+  probe: {fileID: 5422096, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
   velocity: 5
 --- !u!114 &1346115999
 MonoBehaviour:
@@ -1111,7 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259c0c0be5e518e449df4bec15555805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1379664768}
+  target: {fileID: 0}
   distance: 5
   MouseWheelSensitivity: 1
   MouseZoomMin: 1.5

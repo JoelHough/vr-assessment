@@ -36,7 +36,7 @@ public class Gravity : MonoBehaviour {
 
 // Mercury  5.53
 // Venus    81.5
-// Earth    1
+// Earth    100
 // Moon     1.23
 // Mars     10.7
 // Jupiter  31780

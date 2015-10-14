@@ -7,8 +7,6 @@ public class switch_planet : MonoBehaviour {
 
 	public GameObject PlanetToStartWith;
 
-	public Camera Cam;
-
 	public Rigidbody Sun;
 	public Rigidbody Mercury;
 	public Rigidbody Venus;
@@ -22,15 +20,12 @@ public class switch_planet : MonoBehaviour {
 	private Rigidbody[] planets;
 	private GameObject CurrentPlanet;
 
-	private const float ADDITIONAL_DISTANCE = 5;
-
 	void Start () {
 		dp = GetComponent<Dropdown> ();
 		dp.onValueChanged.AddListener(onChange);
 
 		planets = new Rigidbody[] {Sun, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Neptune, Uranus};
 		CurrentPlanet = PlanetToStartWith;
-		adjustCameraDistance ();
 	}
 
 	void onChange (int value) {
@@ -40,12 +35,8 @@ public class switch_planet : MonoBehaviour {
 	void changeGameObject (Rigidbody newBody) {
 		GameObject oldPlanet = CurrentPlanet;
 		CurrentPlanet = Instantiate(newBody, oldPlanet.transform.position, oldPlanet.transform.rotation) as GameObject;
+		Camera.main.SendMessage ("changePlanet", CurrentPlanet.transform);
 		Destroy (oldPlanet);
-		adjustCameraDistance ();
 	}
-
-	void adjustCameraDistance () {
-		var distance = (CurrentPlanet.transform.lossyScale.y * -0.5 / Mathf.Tan (Cam.fieldOfView * 0.5f * Mathf.Deg2Rad)) - CurrentPlanet.transform.lossyScale.y - ADDITIONAL_DISTANCE;
-		Cam.transform.position = new Vector3(Cam.transform.position.x, Cam.transform.position.y, (float)distance);
-	}
+	
 }

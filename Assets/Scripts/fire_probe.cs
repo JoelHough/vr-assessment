@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class fire_probe : MonoBehaviour {
 
 	public Rigidbody probe;
 	public float velocity = 10.0f;
+	public Slider changeVelocitySlider;
 
 	List<Rigidbody> probes = new List<Rigidbody>();
 
 	// Use this for initialization
 	void Start () {
-	
+		changeVelocitySlider.onValueChanged.AddListener(onVelocityChanged);
 	}
 	
 	// Update is called once per frame
@@ -32,5 +34,9 @@ public class fire_probe : MonoBehaviour {
 			Destroy(probes[i].gameObject);
 		}
 		probes = new List<Rigidbody> ();
+	}
+
+	void onVelocityChanged (float value) {
+		velocity = value;
 	}
 }

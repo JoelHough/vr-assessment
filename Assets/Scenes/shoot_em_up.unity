@@ -85,6 +85,33 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &41725652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 41725654}
+  m_Layer: 0
+  m_Name: InvisibleCameraObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &41725654
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 41725652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &79198539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1426,8 @@ GameObject:
   - 45: {fileID: 1346115997}
   - 114: {fileID: 1346115998}
   - 114: {fileID: 1346116000}
+  - 114: {fileID: 1346115999}
+  - 114: {fileID: 1346116001}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1495,6 +1524,18 @@ MonoBehaviour:
   probe: {fileID: 5482804, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
   velocity: 5
   changeVelocitySlider: {fileID: 361069336}
+--- !u!114 &1346115999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1346115991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bf4e55dbf47494f9181e03842c61eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!114 &1346116000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,6 +1554,18 @@ MonoBehaviour:
   MouseWheelSensitivity: 3
   MouseZoomMin: 1.5
   MouseZoomMax: 1000
+--- !u!114 &1346116001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1346115991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1657c3fe650b41c9bc7f3b014e1ad53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invisibleCameraObject: {fileID: 41725652}
 --- !u!4 &1379664768
 Transform:
   m_ObjectHideFlags: 0

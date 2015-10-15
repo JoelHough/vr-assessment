@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MoveCamera : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class MoveCamera : MonoBehaviour {
 	string showMenuText = "Hide";
 
 	public GUISkin guiSkin;
+
+	public StartAssessment assessmentButton;
 	
 	public string planetName;
 	private GameObject planet;
@@ -61,6 +64,12 @@ public class MoveCamera : MonoBehaviour {
 				state = "";
 				time = 0;
 				particles.GetComponent<Renderer> ().enabled = false;
+				showMenu = false;
+				showMenuText = "Show";
+
+				if (planetName == "Earth") {
+					assessmentButton.showButton();
+				}
 			} else {
 				time += Time.deltaTime;
 				Cam.transform.position = Vector3.Slerp(startPosition, endPosition, time/period);
@@ -100,10 +109,6 @@ public class MoveCamera : MonoBehaviour {
 			
 			if(GUI.Button(new Rect(20,140,100,40), "Earth")) {
 				AssignPlanetCameraCoordinates("Earth");
-			}
-			
-			if(GUI.Button(new Rect(220,140,100,40), "Moon")) {
-				AssignPlanetCameraCoordinates("Moon");
 			}
 			
 			if(GUI.Button(new Rect(20,180,100,40), "Mars")) {
@@ -149,6 +154,8 @@ public class MoveCamera : MonoBehaviour {
 		startPosition = Cam.transform.position;
 		var distance = (planet.transform.localScale.y * -0.5 / Mathf.Tan (Cam.fieldOfView * 0.5f * Mathf.Deg2Rad)) - planet.transform.localScale.y - baseDistant;
 		endPosition = new Vector3(planet.transform.position.x, planet.transform.position.y, planet.transform.position.z + (float)distance);
+
+		assessmentButton.hideButton();
 
 		// Switch off flare if sun is selected
 //		if(selectedPlanetName == "Sun")

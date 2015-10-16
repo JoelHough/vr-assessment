@@ -33,7 +33,7 @@ public class fire_probe : MonoBehaviour {
 		for (i = 0; i < probes.Count; i++) {
 			Destroy(probes[i].gameObject);
 		}
-		probes  new List<Rigidbody> ();
+		probes = new List<Rigidbody> ();
 	}
 
 //	void onVelocityChanged (float value) {

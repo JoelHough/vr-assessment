@@ -8,6 +8,7 @@ public class fire_probe : MonoBehaviour {
 	public Rigidbody probe;
 	public float velocity = 10.0f;
 	public Slider changeVelocitySlider;
+	public Transform creationPoint;
 
 	List<Rigidbody> probes = new List<Rigidbody>();
 
@@ -20,9 +21,8 @@ public class fire_probe : MonoBehaviour {
 	void Update () {
 	
 		if (Input.GetButtonDown ("Jump")) {
-			Vector3 startPosition = transform.position + new Vector3(1f, 0f, 1f);
 			Vector3 shootVector = new Vector3(0f, 1f, 2f);
-			Rigidbody newProbe = Instantiate(probe, startPosition, transform.rotation) as Rigidbody;
+			Rigidbody newProbe = Instantiate(probe, creationPoint.position, transform.rotation) as Rigidbody;
 			newProbe.AddForce(shootVector*velocity,ForceMode.VelocityChange);
 			probes.Add(newProbe);
 		}

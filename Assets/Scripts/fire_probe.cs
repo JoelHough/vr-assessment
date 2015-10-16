@@ -7,14 +7,14 @@ public class fire_probe : MonoBehaviour {
 
 	public Rigidbody probe;
 	public float velocity = 10.0f;
-	public Slider changeVelocitySlider;
+	//public Slider changeVelocitySlider;
 	public Transform creationPoint;
 
 	List<Rigidbody> probes = new List<Rigidbody>();
 
 	// Use this for initialization
 	void Start () {
-		changeVelocitySlider.onValueChanged.AddListener(onVelocityChanged);
+		//changeVelocitySlider.onValueChanged.AddListener(onVelocityChanged);
 	}
 	
 	// Update is called once per frame
@@ -36,7 +36,7 @@ public class fire_probe : MonoBehaviour {
 		probes = new List<Rigidbody> ();
 	}
 
-	void onVelocityChanged (float value) {
-		velocity = value;
-	}
+//	void onVelocityChanged (float value) {
+//		velocity = value;
+//	}
 }

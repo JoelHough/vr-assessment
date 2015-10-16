@@ -472,6 +472,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &526997767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 526997768}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &526997768
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526997767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0299999993, y: -.860000014, z: -.00999999978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 707856619}
+  m_RootOrder: 0
 --- !u!1 &610643392
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +686,8 @@ Transform:
   m_LocalRotation: {x: -.0400107466, y: -.572179317, z: .817156553, w: -.0571412556}
   m_LocalPosition: {x: 1, y: -.200000003, z: .5}
   m_LocalScale: {x: .5, y: .5, z: .5}
-  m_Children: []
+  m_Children:
+  - {fileID: 526997768}
   m_Father: {fileID: 1346115996}
   m_RootOrder: 0
 --- !u!1 &759345467
@@ -1612,9 +1640,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193a2aa1fff6a44578db3354d4bd9356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probe: {fileID: 5482804, guid: c75d9ffd209c2e946800778c2de75615, type: 2}
+  probe: {fileID: 5482804, guid: a3a3c4d6c88214c2fa2d2996b0c9283a, type: 2}
   velocity: 5
   changeVelocitySlider: {fileID: 361069336}
+  creationPoint: {fileID: 526997768}
 --- !u!114 &1346115999
 MonoBehaviour:
   m_ObjectHideFlags: 0

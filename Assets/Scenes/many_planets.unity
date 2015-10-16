@@ -195,6 +195,7 @@ GameObject:
   - 81: {fileID: 466234271}
   - 114: {fileID: 466234270}
   - 45: {fileID: 466234276}
+  - 114: {fileID: 466234277}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -292,6 +293,18 @@ Skybox:
   m_GameObject: {fileID: 466234269}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: ccd8a339b22d9654b921c1adeea78d01, type: 2}
+--- !u!114 &466234277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 466234269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5fa6777dfd54d3fb738441840f2f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirror: {fileID: 0}
 --- !u!4 &730681277 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 63742edd796d522458d772b44affdf9b, type: 3}
@@ -514,6 +527,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1565811871}
+  - 114: {fileID: 1565811872}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -535,6 +549,17 @@ Transform:
   - {fileID: 730681277}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1565811872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565811870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5330b58c853314dcf8d10b68619900bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1618733895
 GameObject:
   m_ObjectHideFlags: 0

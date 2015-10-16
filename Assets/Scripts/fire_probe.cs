@@ -21,7 +21,7 @@ public class fire_probe : MonoBehaviour {
 	void Update () {
 	
 		if (Input.GetButtonDown ("Jump")) {
-			Vector3 shootVector = new Vector3(0f, 1f, 2f);
+			Vector3 shootVector = Camera.main.transform.forward.normalized;
 			Rigidbody newProbe = Instantiate(probe, creationPoint.position, transform.rotation) as Rigidbody;
 			newProbe.AddForce(shootVector*velocity,ForceMode.VelocityChange);
 			probes.Add(newProbe);
@@ -33,7 +33,7 @@ public class fire_probe : MonoBehaviour {
 		for (i = 0; i < probes.Count; i++) {
 			Destroy(probes[i].gameObject);
 		}
-		probes = new List<Rigidbody> ();
+		probes  new List<Rigidbody> ();
 	}
 
 //	void onVelocityChanged (float value) {

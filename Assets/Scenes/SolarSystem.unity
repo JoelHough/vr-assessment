@@ -813,7 +813,7 @@ Transform:
   - {fileID: 212012442}
   - {fileID: 1074529113}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &251780829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1503,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &574955894
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,7 +3003,7 @@ Transform:
   m_LocalScale: {x: 109, y: 108.999985, z: 108.999985}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1215747598
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,12 +4681,78 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1371232797}
-  m_LocalRotation: {x: -1.40068309e-07, y: -.999067426, z: -.0431769639, w: 1.68518099e-07}
-  m_LocalPosition: {x: -.200000003, y: -5, z: 70.3000031}
+  m_LocalRotation: {x: -.0224869866, y: -.852878273, z: -.0368589982, w: .520321488}
+  m_LocalPosition: {x: 62.41922, y: -5, z: 32.3414612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1600297464}
+  m_Father: {fileID: 1383552255}
   m_RootOrder: 0
+--- !u!1 &1383552252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1383552255}
+  - 54: {fileID: 1383552254}
+  - 114: {fileID: 1383552253}
+  m_Layer: 0
+  m_Name: User
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1383552253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383552252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452f4af545fed472f87bb5e86af29358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cam: {fileID: 0}
+  velocity: 10
+  guiSkin: {fileID: 11400000, guid: 150f601672d9612429121684fdbdcaf8, type: 2}
+  assessmentButton: {fileID: 845576205}
+  planetName: Sun
+  baseDistant: 2.5
+  baseScrolSpeed: .100000001
+  SunLight: {fileID: 1192127894}
+  particles: {fileID: 1371232799}
+--- !u!54 &1383552254
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383552252}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &1383552255
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383552252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -491.467896, y: -73.7869415, z: -254.5923}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1371232800}
+  - {fileID: 1600297464}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!4 &1408754614 stripped
 Transform:
   m_PrefabParentObject: {fileID: 428466, guid: 20a1e20fa159a844ab77ff4d5e235ca9, type: 2}
@@ -5151,8 +5217,6 @@ GameObject:
   - 82: {fileID: 1600297470}
   - 114: {fileID: 1600297471}
   - 114: {fileID: 1600297472}
-  - 54: {fileID: 1600297473}
-  - 114: {fileID: 1600297474}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5167,12 +5231,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600297463}
   m_LocalRotation: {x: 0, y: .520807028, z: 0, w: .853674412}
-  m_LocalPosition: {x: -491.467865, y: -73.7869568, z: -254.592346}
+  m_LocalPosition: {x: 0, y: 0, z: -4.57763672e-05}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1371232800}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 1383552255}
+  m_RootOrder: 1
 --- !u!81 &1600297466
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5373,40 +5436,6 @@ MonoBehaviour:
     type: 3}
   brightPassFilterShader: {fileID: 4800000, guid: 186c4c0d31e314f049595dcbaf4ca129,
     type: 3}
---- !u!54 &1600297473
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1600297463}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1600297474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1600297463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452f4af545fed472f87bb5e86af29358, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 10
-  guiSkin: {fileID: 11400000, guid: 150f601672d9612429121684fdbdcaf8, type: 2}
-  assessmentButton: {fileID: 845576205}
-  planetName: Sun
-  baseDistant: 2.5
-  baseScrolSpeed: .100000001
-  SunLight: {fileID: 1192127894}
-  particles: {fileID: 1371232799}
 --- !u!1001 &1616755889
 Prefab:
   m_ObjectHideFlags: 0
@@ -5962,7 +5991,7 @@ RectTransform:
   m_Children:
   - {fileID: 845576201}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MoveCamera : MonoBehaviour {
 
 	private Rigidbody body;
-	private Camera Cam;
+	public Camera Cam;
 
 	private string state = "";
 	private Quaternion startRotation, endRotation;
@@ -35,7 +35,6 @@ public class MoveCamera : MonoBehaviour {
 
 	void Start () {
 		body = GetComponent<Rigidbody> ();
-		Cam = GetComponent<Camera> ();
 	}
 
 	// Update is called once per frame
@@ -54,7 +53,7 @@ public class MoveCamera : MonoBehaviour {
 				time = 0;
 			} else {
 				time += Time.deltaTime;
-				Cam.transform.rotation = Quaternion.Slerp(startRotation, endRotation, time/period);
+				transform.rotation = Quaternion.Slerp(startRotation, endRotation, time/period);
 			}
 		}
 
@@ -72,7 +71,7 @@ public class MoveCamera : MonoBehaviour {
 				}
 			} else {
 				time += Time.deltaTime;
-				Cam.transform.position = Vector3.Slerp(startPosition, endPosition, time/period);
+				transform.position = Vector3.Slerp(startPosition, endPosition, time/period);
 			}
 		}
 	}
@@ -147,11 +146,11 @@ public class MoveCamera : MonoBehaviour {
 
 		state = "rotate";
 
-		startRotation = Cam.transform.rotation;
-		Vector3 direction = Cam.transform.position - planet.transform.position;
+		startRotation = transform.rotation;
+		Vector3 direction = transform.position - planet.transform.position;
 		endRotation = Quaternion.LookRotation (direction * -1);
 
-		startPosition = Cam.transform.position;
+		startPosition = transform.position;
 		var distance = (planet.transform.localScale.y * -0.5 / Mathf.Tan (Cam.fieldOfView * 0.5f * Mathf.Deg2Rad)) - planet.transform.localScale.y - baseDistant;
 		endPosition = new Vector3(planet.transform.position.x, planet.transform.position.y, planet.transform.position.z + (float)distance);
 
